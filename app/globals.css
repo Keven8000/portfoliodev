@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8FDFE; 
+  --foreground: #1A1615; 
+  --text: #1A1615; 
+
+  --surface: #AFA69D; 
+  --surface-text: #504943; 
+
+  --primary: #0784b2;
+  --primary-hover: #0097AC; 
+   --meu-degrade: linear-gradient(to right, #2f39a4, #3B83FB);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme='dark'] {
+  --background: #1A1615; 
+  --foreground: #F8FDFE;
+
+  --text: #F8FDFE;
+
+  --surface: #bbb7b3; 
+  --surface-text: #8d8888; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+   --font-mono: var(--font-geist-mono);
+
+  /* =========================================
+     CORES BASE
+     ========================================= */
+  --color-background: var(--background); /* Fundo principal */
+  --color-foreground: var(--foreground); /* Contraste do fundo */
+  --color-text-color: var(--text); /* Texto principal  */
+
+  /* =========================================
+     SUPERFÍCIES
+     ========================================= */
+  --color-surface: var(--surface); /* painéis do fundo */
+  --color-surface-text: var(--surface-text); /*Cor de texto acinzentada para textos secundarios ou que vai em cima da superfície */
+
+  /* =========================================
+     CORES DE AÇÃO
+     ========================================= */
+  --color-primary: var(--primary); /* Azul Oceano (Perfeito para botões principais) */
+  --color-primary-hover: var(--primary-hover); /* Azul Piscina (Cor quando passa o mouse) */
+  --background-image-degrade: var(--meu-degrade); /* Degrade */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+   background: var(--background);
+   color: var(--foreground);
+   /* font-family: Arial, Helvetica, sans-serif; */
+   font-family: var(--font-geist-mono); 
+   transition: background 0.3s ease, color 0.3s ease;
+}
+
+p, span, li {
+   font-family: var(--font-geist-mono); 
+   word-spacing: -3px;
+   letter-spacing: -0.04em;
+}
+
+/* 2. A exceção: Todos os Títulos usam a fonte SANS */
+h1, h2, h3, h4, h5, h6, button, a {
+   font-family: var(--font-geist-sans);
+   font-weight: 700; 
+}
+
+@utility container-lp {
+   width: 90%;
+   margin: 0 auto;
 }
