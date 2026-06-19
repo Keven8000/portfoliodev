@@ -2,7 +2,7 @@
 export function HeroSection() {
   return (
     /* min de mt-10 px por causa do top-2.5 no header */
-    <section className=" bg-background flex items-center justify-center mt-[80px]">
+    <section className="relative  bg-background flex items-center justify-center mt-[80px]">
       {/* Container Principal: Grid dividindo em 2 colunas no Desktop */}
       <div className="container-lp grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         

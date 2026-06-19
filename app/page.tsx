@@ -3,9 +3,12 @@ import { HeroSection } from "@/components/sections/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <Header/>
+    <main className="overflow-x-clip ">
+      <Header/> 
       <HeroSection/>
-    </div>
+      <div className=" w-1 h-[5000px] bg-amber-500">
+
+      </div>
+    </main>
   );
 } 
