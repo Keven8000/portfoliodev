@@ -1,8 +1,8 @@
 
 export function HeroSection() {
   return (
-    /* min de mt-10 px por causa do top-2.5 no header */
-    <section className="relative  bg-background flex items-center justify-center mt-[80px]">
+    /* min de mt-[10px] por causa do top-2.5 no header */
+    <section className="relative bg-background flex items-center justify-center mt-[80px]">
       {/* Container Principal: Grid dividindo em 2 colunas no Desktop */}
       <div className="container-lp grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
@@ -12,28 +12,28 @@ export function HeroSection() {
             <span className="bg-degrade bg-clip-text text-transparent text-sm tracking-wider uppercase mb-2 block">
               Bem-vindo ao meu portfólio
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-color leading-tight">
-              Desenvolvimento web além da interface.
+            <h1 className="text-3xl max-[480px]:text-2xl sm:text-4xl font-bold text-text-color leading-tight">
+              Desenvolvedor Web especializado em Frontend
               <br />
             </h1>
           </div>
           
           <p className="text-base md:text-lg text-surface-text leading-relaxed">
-            Desenvolvedor Full Stack especializado em React, Next.js e tecnologias modernas. Crio sites, plataformas e automações que ajudam empresas a crescer, otimizar processos e transformar ideias em produtos digitais de alto desempenho.
+           Desenvolvo aplicações web com foco em performance, experiência do usuário e qualidade de código, utilizando principalmente React, Next.js, TypeScript e tecnologias modernas do ecossistema web. Também tenho experiência com integrações de APIs, automações e conhecimentos de backend que me permitem atuar além da interface quando necessário.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <a 
-              href="#projetos" 
-              className="inline-flex justify-center items-center bg-primary  hover:bg-primary-hover text-text-color hover:text-background font-medium py-3 px-8 rounded-lg transition-colors duration-300 shadow-lg"
-            >
-              Ver meus Projetos
-            </a>
+          <div className="flex flex-col min-[500px]:flex-row gap-4 mt-4">
             <a 
               href="#contato" 
               className="inline-flex justify-center items-center bg-surface/80 hover:bg-surface text-text-color hover:text-background border border-surface-text font-medium py-3 px-8 rounded-lg transition-all duration-300"
             >
               Entrar em Contato
+            </a>
+            <a 
+              href="#projetos" 
+              className="inline-flex justify-center items-center bg-primary  hover:bg-primary-hover text-text-color hover:text-background font-medium py-3 px-8 rounded-lg transition-colors duration-300 shadow-lg"
+            >
+              Ver meus Projetos
             </a>
           </div>
         </div>
