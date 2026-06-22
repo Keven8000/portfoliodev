@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeButton } from "@/components/ThemeButton";
+import { ThemeButton } from "@/components/utilitarios/ThemeButton";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -23,7 +23,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="container-lp sticky top-2.5 z-50 text-text-color transition-colors duration-300">
+    <header className="container-lp sticky top-2.5 z-900 text-text-color transition-colors duration-300">
       <div
         className={`flex items-center justify-between gap-4 transition-all duration-300 ease-in-out py-4 ${
           isScrolled

@@ -1,3 +1,4 @@
+import { CtaButton } from "../utilitarios/CtaButton";
 
 export function HeroSection() {
   return (
@@ -21,21 +22,10 @@ export function HeroSection() {
           <p className="text-base md:text-lg text-surface-text leading-relaxed">
            Desenvolvo aplicações web com foco em performance, experiência do usuário e qualidade de código, utilizando principalmente React, Next.js, TypeScript e tecnologias modernas do ecossistema web. Também tenho experiência com integrações de APIs, automações e conhecimentos de backend que me permitem atuar além da interface quando necessário.
           </p>
-
-          <div className="flex flex-col min-[500px]:flex-row gap-4 mt-4">
-            <a 
-              href="#contato" 
-              className="inline-flex justify-center items-center bg-surface/80 hover:bg-surface text-text-color hover:text-background border border-surface-text font-medium py-3 px-8 rounded-lg transition-all duration-300"
-            >
-              Entrar em Contato
-            </a>
-            <a 
-              href="#projetos" 
-              className="inline-flex justify-center items-center bg-primary  hover:bg-primary-hover text-text-color hover:text-background font-medium py-3 px-8 rounded-lg transition-colors duration-300 shadow-lg"
-            >
-              Ver meus Projetos
-            </a>
-          </div>
+          <CtaButton 
+            text="Entrar em contato"
+            href="contato"
+          />
         </div>
 
         {/* Coluna da Direita: Vídeo com proporção deitada (16:9) */}
