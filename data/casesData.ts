@@ -43,7 +43,7 @@ export const casesData: CaseProject[] = [
     url: "https://atomvoip.com.br/",
     coverImage: "/cases/atomvoip/capaatomvoip.webp",
     logo: "/cases/atomvoip/atomvoip-logo.webp",
-    technologies: ["HTML", "CSS", "Javascript", "Eleventy", "Netlify", "Nunjucks"],
+    technologies: ["HTML", "CSS", "JavaScript", "Eleventy", "Netlify", "Nunjucks"],
     shortDescription:
       "Site institucional para empresa do setor de telefonia, com foco em performance, SEO e experiência do usuário.",
     highlights: ["Performance", "SEO", "Experiência do usuário"],
@@ -62,7 +62,7 @@ export const casesData: CaseProject[] = [
     url: "https://santoliaminer.com.br/",
     coverImage: "/cases/santoliaminer/capasantoliaminer.webp",
     logo: "/cases/santoliaminer/santoliaminer-logo.webp",
-    technologies: ["Shopify", "Liquid", "CSS", "Javascript", "APIs", "Vercel"],
+    technologies: ["Shopify", "Liquid", "CSS", "JavaScript", "APIs", "Vercel"],
     shortDescription:
       "E-commerce em Shopify com customizações em Liquid e integração de dados em tempo real via API própria.",
     highlights: ["Entrega rápida", "Customização Liquid", "Dados em tempo real"],
