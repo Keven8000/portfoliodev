@@ -32,19 +32,21 @@ export function CaseCard({ project, onOpen }: CaseCardProps) {
 
       <div className="flex flex-1 flex-col gap-4 p-6">
         <div>
-          <div className="flex gap-2 items-center mb-6">
+          <div className="flex items-center gap-2 mb-6"> {/* Adicionei items-center e ajustei o gap */}
             <motion.div
               layoutId={`case-logo-${project.id}`}
-              className="relative max-w-12 aspect-[50/40] w-full overflow-hidden "
+              className="relative flex items-center justify-center w-14 h-10  " 
             >
               <Image 
                   src={project.logo} 
                   unoptimized 
                   alt={`logo ${project.name}`} 
-                  fill className="max-w-12" 
+                  width={64} // Força uma largura base para o NextJS
+                  height={64} // Força uma altura base
+                  className="w-full h-full object-contain" 
               />
             </motion.div>            
-            <span className="w-px h-8 bg-surface opacity-60 block" aria-hidden="true" />
+            <span className="w-[1.5px] h-8 bg-surface opacity-60 block " aria-hidden="true" />
             <h3 className="text-2xl font-bold text-text-color">{project.name}</h3>
           </div>
           <p className="mt-2 text-sm leading-relaxed text-surface-text">

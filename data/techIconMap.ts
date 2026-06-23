@@ -8,6 +8,10 @@ import {
   SiReact,
   SiTypescript,
   SiTailwindcss,
+  SiJavascript,
+  SiNetlify,
+  SiNunjucks
+
 } from "@icons-pack/react-simple-icons";
 import { Webhook } from "lucide-react";
 import type { ComponentType, SVGProps } from "react";
@@ -27,6 +31,9 @@ export const techIconMap: Record<string, BrandIcon> = {
   React: SiReact,
   TypeScript: SiTypescript,
   "Tailwind CSS": SiTailwindcss,
+  Javascript: SiJavascript,
+  Netlify: SiNetlify,
+  Nunjucks: SiNunjucks,
 };
 
 // Ícone sem marca/logo oficial (ex: "APIs"), usado separadamente no componente

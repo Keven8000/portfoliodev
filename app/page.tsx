@@ -7,9 +7,7 @@ export default function Home() {
       <Header/> 
       <HeroSection/>
       <CasesSection/>
-      <div className=" w-1 h-[5000px] bg-amber-500">
 
-      </div>
     </main>
   );
 } 

@@ -50,7 +50,7 @@ export function CaseDetailPanel({ project, onClose }: CaseDetailPanelProps) {
         <motion.div
           onClick={(e) => e.stopPropagation()}
           layoutId={`case-card-${project.id}`}
-          className="relative flex max-h-[680px] w-full max-w-5xl flex-col overflow-y-auto rounded-2xl bg-background shadow-2xl lg:flex-row"
+          className="relative flex max-h-[90vh] w-full max-w-7xl flex-col overflow-y-auto rounded-2xl bg-background shadow-2xl lg:flex-row"
         >
           <button
             onClick={onClose}
@@ -62,7 +62,7 @@ export function CaseDetailPanel({ project, onClose }: CaseDetailPanelProps) {
 
           {/* ── Coluna esquerda: capa + informações ── */}
           <div className="flex flex-col lg:w-[45%] lg:shrink-0">
-            <motion.div
+          {/*<motion.div
               layoutId={`case-cover-${project.id}`}
               className="relative aspect-[1440/700] w-full overflow-hidden bg-surface/10 lg:aspect-auto lg:h-56"
             >
@@ -72,29 +72,31 @@ export function CaseDetailPanel({ project, onClose }: CaseDetailPanelProps) {
                 alt={project.name} 
                 fill className="object-cover" 
                 />
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.3 }}
-              className="flex flex-1 flex-col gap-6 p-6 sm:p-8"
+              className="flex flex-1 flex-col gap-6 p-4 sm:p-8"
             >
               <div>
-                <div className="flex gap-2 items-center mb-6">
+                <div className="flex items-center gap-1 mb-6"> {/* Adicionei items-center e ajustei o gap */}
                   <motion.div
                     layoutId={`case-logo-${project.id}`}
-                    className="relative max-w-12 aspect-[50/40] w-full overflow-hidden "
+                    className="relative flex items-center justify-center w-14 h-10  " 
                   >
                     <Image 
                         src={project.logo} 
                         unoptimized 
                         alt={`logo ${project.name}`} 
-                        fill className="max-w-12" 
+                        width={64} // Força uma largura base para o NextJS
+                        height={64} // Força uma altura base
+                        className="w-full h-full object-contain" 
                     />
                   </motion.div>            
-                  <span className="w-px h-8 bg-surface opacity-60 block" aria-hidden="true" />
-                  <h3 className="text-2xl font-bold text-text-color">{project.name}</h3>
+                  <span className="w-[1.5px] h-8 bg-surface opacity-60 block " aria-hidden="true" />
+                  <h3 className="text-2xl max-[355px]:text-lg max-[420px]:text-xl font-bold text-text-color">{project.name}</h3>
                 </div>
 
                 <div className="mt-3 flex flex-wrap items-center gap-3">
@@ -119,7 +121,7 @@ export function CaseDetailPanel({ project, onClose }: CaseDetailPanelProps) {
                 </div>
               </div>
 
-              <p className="leading-relaxed text-surface-text">
+              <p className="leading-relaxed text-surface-text max-[400px]:hyphens-auto">
                 {project.fullDescription}
               </p>
 
@@ -136,7 +138,7 @@ export function CaseDetailPanel({ project, onClose }: CaseDetailPanelProps) {
                 </ul>
               )}
 
-              <div className="mt-auto flex flex-wrap items-center justify-between gap-4 border-t border-surface pt-6">
+              <div className="mt-auto flex flex-wrap items-center lg:justify-between gap-6 lg:border-t lg:border-surface lg:pt-6">
                 <div className="flex items-center gap-2 text-sm text-surface-text">
                   <Clock className="size-4" />
                   <span>Desenvolvimento: {project.developmentTime}</span>
@@ -160,7 +162,7 @@ export function CaseDetailPanel({ project, onClose }: CaseDetailPanelProps) {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.3 }}
-            className="flex flex-col gap-4 border-t border-surface p-6 sm:p-8 lg:flex-1 lg:border-l lg:border-t-0"
+            className="flex flex-col gap-4 border-t border-surface p-4 sm:p-8 lg:flex-1 lg:border-l lg:border-t-0"
           >
             {/* Toggle desktop / mobile */}
             <div className="flex items-center">
@@ -203,7 +205,7 @@ export function CaseDetailPanel({ project, onClose }: CaseDetailPanelProps) {
               className={
                 viewMode === "desktop"
                   ? "flex flex-col gap-4"
-                  : "flex justify-center flex-row gap-4"
+                  : "flex justify-center flex-row gap-4 pb-4"
               }
             >
               {/* Imagem grande em destaque */}
