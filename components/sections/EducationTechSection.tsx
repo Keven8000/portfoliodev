@@ -1,72 +1,26 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Download, GraduationCap, Code2, Server, Bot, BookOpen } from "lucide-react";
-import { techIconMap, fallbackIcon } from "@/data/techIconMap"; // Ajuste o caminho conforme seu projeto
+import { Download, GraduationCap, BookOpen } from "lucide-react";
+import { techIconMap, fallbackIcon } from "@/data/techIconMap";
+import {educationData, techCategories} from "@/data/educationdata"
 
-// --- DADOS DA SEÇÃO ---
 
-const educationData = [
-  {
-    course: "CS50: Introduction to Computer Science",
-    institution: "Harvard University",
-  },
-  {
-    course: "Formação Full Stack",
-    institution: "B7Web",
-  },
-  {
-    course: "UX/UI Design Certificate",
-    institution: "Google",
-  },
-  {
-    course: "Fundamentos (Python, JS, SQL, HTML, CSS)",
-    institution: "Curso em Vídeo (Prof. Gustavo Guanabara)",
-  },
-  {
-    course: "Análise e Desenvolvimento de Sistemas (1 ano cursado)",
-    institution: "UNINASSAU",
-  },
-];
-
-const techCategories = [
-  {
-    title: "Frontend & E-commerce",
-    badge: "Profissional",
-    icon: Code2,
-    items: [
-      "Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS", 
-      "HTML", "CSS", "Eleventy", "Liquid", "E-commerces"
-    ]
-  },
-  {
-    title: "Backend & Infraestrutura",
-    badge: "Profissional",
-    icon: Server,
-    items: ["Node.js", "APIs REST", "Git", "GitHub", "Vercel", "Netlify"]
-  },
-  {
-    title: "Laboratório & Automação",
-    badge: "Projetos Pessoais",
-    icon: Bot,
-    items: ["Docker", "n8n", "Evolution API", "Chatwoot", "Webhooks", "TablePlus"]
-  }
-];
 
 // --- COMPONENTE PRINCIPAL ---
 
 export function EducationTechSection() {
   return (
-    <section id="sobre" className="py-24 bg-background transition-colors duration-300">
+    <section id="sobre" className="py-20 bg-background transition-colors duration-300">
       <div className="container-lp">
         
         {/* Cabeçalho da Seção */}
-        <div className="mb-16 text-center md:text-left">
-          <h2 className="text-3xl md:text-5xl text-foreground font-bold mb-4">
-            Estudos & Tecnologias
+        <div className="mb-16 xl:max-w-1/2 ">
+          <h2 className="text-3xl max-[480px]:text-2xl sm:text-4xl text-foreground font-bold mb-4">
+            Educação & Tecnologias
           </h2>
-          <p className="text-surface-text text-lg max-w-2xl leading-relaxed">
-            Minha base acadêmica e o ecossistema de ferramentas que utilizo para construir e escalar soluções no dia a dia.
+          <p className="text-surface-text leading-relaxed">
+            Minha base acadêmica e o ecossistema de ferramentas que utilizo para <span className="bg-degrade bg-clip-text text-transparent !font-geist-sans">construir e escalar soluções.</span>
           </p>
         </div>
 
@@ -77,7 +31,7 @@ export function EducationTechSection() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5 }}
               className="bg-surface/10 border border-surface/20 rounded-3xl p-8"
             >
@@ -109,7 +63,7 @@ export function EducationTechSection() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <a 
@@ -134,9 +88,9 @@ export function EducationTechSection() {
                   key={category.title}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-surface/5 border border-surface/20 rounded-3xl p-6 sm:p-8"
+                  className="bg-surface/5 border border-surface/15 transition-colors duration-200 hover:border-primary/80 rounded-3xl p-6 sm:p-8"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                     <div className="flex items-center gap-3">

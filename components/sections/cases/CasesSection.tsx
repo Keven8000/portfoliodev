@@ -12,16 +12,13 @@ export function CasesSection() {
   const activeCase = casesData.find((c) => c.id === activeCaseId) ?? null;
 
   return (
-    <section id="cases" className="container-lp py-20">
-      <div className="mb-12 max-w-2xl">
-        <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-          Cases
-        </span>
-        <h2 className="mt-2 text-3xl font-bold text-text-color sm:text-4xl">
-          Projetos entregues, problemas reais resolvidos
+    <section id="cases" className="container-lp pt-24 pb-20">
+      <div className="mb-12 xl:max-w-1/2 ">
+        <h2 className="mt-2 text-3xl max-[480px]:text-2xl sm:text-4xl font-bold text-text-color ">
+          <span className="bg-degrade bg-clip-text text-transparent !font-geist-sans">Cases entregues</span>, problemas reais resolvidos
         </h2>
         <p className="mt-3 text-surface-text">
-          Uma seleção de trabalhos feitos para clientes reais, do briefing à entrega em produção.
+          Uma seleção de <span className="text-primary">cases</span> trabalhos feitos para clientes reais, do briefing à entrega em produção.
         </p>
       </div>
 

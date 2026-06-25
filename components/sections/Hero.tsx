@@ -13,13 +13,13 @@ export function HeroSection() {
             <span className="bg-degrade bg-clip-text text-transparent text-sm tracking-wider uppercase mb-2 block">
               Bem-vindo ao meu portfólio
             </span>
-            <h1 className="text-3xl max-[480px]:text-2xl sm:text-4xl font-bold text-text-color leading-tight">
+            <h1 className="text-3xl max-[480px]:text-2xl sm:text-4xl xl:text-[40px] font-bold text-text-color leading-tight">
               Desenvolvedor Web especializado em Frontend
               <br />
             </h1>
           </div>
           
-          <p className="text-base md:text-lg text-surface-text leading-relaxed">
+          <p className="text-base md:text-lg text-surface-text leading-relaxed hyphens-auto">
            Desenvolvo aplicações web com foco em performance, experiência do usuário e qualidade de código, utilizando principalmente React, Next.js, TypeScript e tecnologias modernas do ecossistema web. Também tenho experiência com integrações de APIs, automações e conhecimentos de backend que me permitem atuar além da interface quando necessário.
           </p>
           <CtaButton 
