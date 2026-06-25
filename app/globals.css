@@ -60,7 +60,9 @@ body {
 /* 
 Títulos acompanhado de textos: xl:max-w-1/2
 
-base h2: text-3xl max-[480px]:text-2xl sm:text-4xl
+base h1 ou títulos importante: xl:text-[40px]
+
+base h2: text-3xl max-[480px]:text-2xl sm:text-4xl 
 
 */
 

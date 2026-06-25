@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Mail, ArrowRight, Copy, CheckCircle2 } from "lucide-react";
+import { Mail, ArrowRight, Copy, CheckCircle2, Phone } from "lucide-react";
 import { SiGithub, SiWhatsapp } from "@icons-pack/react-simple-icons";
 import { useState } from "react";
 import { contactType, contactData } from "@/data/Contactdata";
@@ -53,11 +53,11 @@ export function ContactSection() {
             
             {/* Coluna da Esquerda: Chamada Principal */}
             <div className="flex flex-col gap-6">
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">
-                Vamos construir algo <span className="bg-degrade bg-clip-text text-transparent !font-geist-sans">incrível juntos?</span>
+              <h2 className="text-3xl max-[480px]:text-2xl sm:text-4xl xl:text-[40px] font-bold text-foreground leading-tight">
+                Aberto a novas <span className="bg-degrade bg-clip-text text-transparent !font-geist-sans">oportunidades</span>
               </h2>
-              <p className="text-lg text-surface-text leading-relaxed max-w-md">
-                Seja para uma nova oportunidade na sua empresa, uma parceria ou um projeto do zero, estou sempre aberto para um bom bate-papo.
+              <p className="text-lg text-surface-text leading-relaxed">
+                Disponível para novas oportunidades, participação em projetos e parcerias profissionais. Entre em contato para conversarmos sobre como posso contribuir com sua equipe ou negócio.
               </p>
 
               {/* Botão Principal: WhatsApp */}
@@ -103,7 +103,7 @@ export function ContactSection() {
               <div className="group flex items-center justify-between p-4 rounded-2xl bg-background border border-surface/30 hover:border-primary/50 transition-colors duration-300">
                 <div className="flex items-center gap-4 overflow-hidden">
                   <div className="flex items-center justify-center size-12 rounded-full bg-surface/10 text-text-color group-hover:bg-primary/10 group-hover:text-primary transition-colors">
-                    <Mail className="size-5" />
+                    <Phone className="size-5" />
                   </div>
                   <div className="flex flex-col overflow-hidden">
                     <span className="text-sm font-bold text-text-color">Número para contato</span>

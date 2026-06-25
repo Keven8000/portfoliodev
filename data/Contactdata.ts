@@ -4,7 +4,7 @@ import { GoNumber } from "react-icons/go";
 
 // naturalmente escreveria após ver o portfólio
 const whatsappMessage =
-  "Olá, Keven! Acessei o seu portfólio e achei o seu perfil muito interessante. Gostaria de conversar com você sobre algumas oportunidades.";
+  "Olá, Keven! Acessei o seu portfólio e gostaria de conversar com você sobre algumas oportunidades.";
 
 export type contactType = {
   email: string;
