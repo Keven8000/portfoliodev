@@ -19,7 +19,7 @@ export function EducationTechSection() {
           <h2 className="text-3xl max-[480px]:text-2xl sm:text-4xl text-foreground font-bold mb-4">
             Educação & Tecnologias
           </h2>
-          <p className="text-surface-text leading-relaxed">
+          <p className="text-surface-text leading-relaxed sm:text-lg">
             Minha base acadêmica e o ecossistema de ferramentas que utilizo para <span className="bg-degrade bg-clip-text text-transparent">construir e escalar soluções.</span>
           </p>
         </div>

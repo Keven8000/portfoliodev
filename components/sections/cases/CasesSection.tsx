@@ -15,9 +15,9 @@ export function CasesSection() {
     <section id="cases" className="container-lp pt-24 pb-20">
       <div className="mb-12 xl:max-w-1/2 ">
         <h2 className="mt-2 text-3xl max-[480px]:text-2xl sm:text-4xl font-bold text-text-color ">
-          <span className="bg-degrade bg-clip-text text-transparent !font-geist-sans">Cases entregues</span>, problemas reais resolvidos
+          <span className="bg-degrade bg-clip-text text-transparent !font-geist-sans">Cases entregues,</span> problemas reais resolvidos
         </h2>
-        <p className="mt-3 text-surface-text">
+        <p className="mt-3 text-surface-text sm:text-lg">
           Uma seleção de <span className="text-primary">cases</span> trabalhos feitos para clientes reais, do briefing à entrega em produção.
         </p>
       </div>

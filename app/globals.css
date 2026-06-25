@@ -55,6 +55,7 @@ body {
    /* font-family: Arial, Helvetica, sans-serif; */
    font-family: var(--font-geist-mono); 
    transition: background 0.3s ease, color 0.3s ease;
+   font-size: 16px;
 }
 
 /* 
@@ -64,6 +65,7 @@ base h1 ou títulos importante: xl:text-[40px]
 
 base h2: text-3xl max-[480px]:text-2xl sm:text-4xl 
 
+textos pós títulos: sm:text-lg
 */
 
 p, span, li {

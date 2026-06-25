@@ -43,25 +43,25 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="bg-surface/10 border border-surface/20 rounded-3xl p-8 md:p-12 lg:p-16 relative overflow-hidden"
+          className="bg-surface/10 border border-surface/20 rounded-3xl p-8 px-4 sm:px-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
           {/* Efeito visual decorativo de fundo (opcional, usa a cor primária bem suave) */}
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" aria-hidden="true" />
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" aria-hidden="true" />
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl" aria-hidden="true" />
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl" aria-hidden="true" />
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative z-10 flex flex-col lg:flex-row gap-12 lg:items-center">
             
             {/* Coluna da Esquerda: Chamada Principal */}
-            <div className="flex flex-col gap-6">
+            <div className="lg:flex-[1.4] flex flex-col gap-6">
               <h2 className="text-3xl max-[480px]:text-2xl sm:text-4xl xl:text-[40px] font-bold text-foreground leading-tight">
-                Aberto a novas <span className="bg-degrade bg-clip-text text-transparent !font-geist-sans">oportunidades</span>
+                Aberto para novas <span className="bg-degrade bg-clip-text text-transparent !font-geist-sans">oportunidades</span>
               </h2>
-              <p className="text-lg text-surface-text leading-relaxed">
+              <p className="sm:text-lg text-surface-text leading-relaxed">
                 Disponível para novas oportunidades, participação em projetos e parcerias profissionais. Entre em contato para conversarmos sobre como posso contribuir com sua equipe ou negócio.
               </p>
 
               {/* Botão Principal: WhatsApp */}
-              <div className="mt-4">
+              <div className="mt-4 hidden lg:block">
                 <a 
                   href={contactData.whatsapp.url}
                   target="_blank"
@@ -76,7 +76,7 @@ export function ContactSection() {
             </div>
 
             {/* Coluna da Direita: Outras Formas de Contato */}
-            <div className="flex flex-col gap-4 lg:pl-12">
+            <div className="lg:flex-1 flex flex-col gap-4">
               
               {/* E-mail (Com botão de copiar) */}
               <div className="group flex items-center justify-between p-4 rounded-2xl bg-background border border-surface/30 hover:border-primary/50 transition-colors duration-300">
@@ -107,14 +107,14 @@ export function ContactSection() {
                   </div>
                   <div className="flex flex-col overflow-hidden">
                     <span className="text-sm font-bold text-text-color">Número para contato</span>
-                    <p className="text-surface-text text-sm hover:text-primary transition-colors truncate">
+                    <p className="text-surface-text text-sm truncate">
                       {contactData.whatsapp.displayNumber}
                     </p>
                   </div>
                 </div>
                 <button 
                   onClick={() => handleCopy('whatsapp')}
-                  aria-label="Copiar e-mail"
+                  aria-label="Copiar número"
                   className="cursor-pointer p-2 rounded-lg hover:bg-surface/10 text-surface-text hover:text-text-color transition-colors"
                 >
                   {copied === "whatsapp" ? <CheckCircle2 className="size-5 text-green-500" /> : <Copy className="size-5" />}
@@ -157,6 +157,17 @@ export function ContactSection() {
                 </div>
               </a>
 
+            </div>
+            <div className="block lg:hidden">
+              <a 
+                href={contactData.whatsapp.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 bg-primary hover:bg-primary-hover text-background font-bold text-lg py-4 px-8 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-primary/30"
+              >
+                <SiWhatsapp className="size-6" />
+                <span>Chamar no WhatsApp</span>
+              </a>
             </div>
           </div>
         </motion.div>

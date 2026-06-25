@@ -19,7 +19,7 @@ export function HeroSection() {
             </h1>
           </div>
           
-          <p className="text-base md:text-lg text-surface-text leading-relaxed hyphens-auto">
+          <p className="sm:text-lg text-surface-text leading-relaxed hyphens-auto">
            Desenvolvo aplicações web com foco em performance, experiência do usuário e qualidade de código, utilizando principalmente React, Next.js, TypeScript e tecnologias modernas do ecossistema web. Também tenho experiência com integrações de APIs, automações e conhecimentos de backend que me permitem atuar além da interface quando necessário.
           </p>
           <CtaButton 
