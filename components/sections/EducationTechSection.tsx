@@ -11,7 +11,7 @@ import {educationData, techCategories} from "@/data/educationdata"
 
 export function EducationTechSection() {
   return (
-    <section id="sobre" className="py-10 sm:py-20 bg-background transition-colors duration-300">
+    <section id="educacao" className="py-10 sm:py-20 bg-background transition-colors duration-300">
       <div className="container-lp">
         
         {/* Cabeçalho da Seção */}

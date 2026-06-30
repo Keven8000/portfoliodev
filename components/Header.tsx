@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { label: "Cases", href: "#cases" },
-  { label: "Projetos", href: "#projetos" },
   { label: "Educação & Tecnologias", href: "#educacao" },
   { label: "Contato", href: "#contato" },
 ];
@@ -16,11 +15,26 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  /* Detectar o header quando desce e sobe */
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  /* Trava scroll com menu mobile aberto */
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    
+    // Cleanup de segurança caso o componente desmonte
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   return (
     <header className="container-lp sticky top-2.5 z-900 text-text-color transition-colors duration-300">
@@ -105,6 +119,7 @@ export function Header() {
         }`}
         onClick={() => setMenuOpen(false)}
         aria-hidden="true"
+        focus-trap-react
       />
 
       <nav

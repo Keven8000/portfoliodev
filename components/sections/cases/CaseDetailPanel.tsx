@@ -148,7 +148,7 @@ export function CaseDetailPanel({ project, onClose }: CaseDetailPanelProps) {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-background transition-colors duration-200 hover:bg-primary-hover"
+                  className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-hover"
                 >
                   Visitar site
                   <ExternalLink className="size-4" />

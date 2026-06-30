@@ -4,8 +4,8 @@
 
 :root {
   --background: #F8FDFE; 
-  --foreground: #1A1615; 
-  --text: #1A1615; 
+  --foreground: #0e0c0c; 
+  --text: #0e0c0c; 
 
   --surface: #AFA69D; 
   --surface-text: #504943; 
@@ -15,8 +15,10 @@
    --meu-degrade: linear-gradient(to right, #2f39a4, #3B83FB);
 }
 
+/* Segunda opc de dark: #1A1615 */
+
 [data-theme='dark'] {
-  --background: #1A1615; 
+  --background: #0e0c0c;
   --foreground: #F8FDFE;
 
   --text: #F8FDFE;

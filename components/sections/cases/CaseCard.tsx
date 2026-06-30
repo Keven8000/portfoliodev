@@ -78,7 +78,7 @@ export function CaseCard({ project, onOpen }: CaseCardProps) {
 
         <button
           onClick={onOpen}
-          className="cursor-pointer mt-auto flex items-center gap-2 self-start text-sm font-semibold text-primary transition-colors duration-200 hover:text-primary-hover"
+          className="mt-2 cursor-pointer flex items-center gap-2 self-start text-sm font-semibold text-white transition-colors duration-200 bg-primary hover:bg-primary-hover py-2 px-4 rounded-4xl"
         >
           Saber mais
           <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
