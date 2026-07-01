@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { Download, GraduationCap, BookOpen } from "lucide-react";
 import { techIconMap, fallbackIcon } from "@/data/techIconMap";
-import {educationData, techCategories} from "@/data/educationdata"
+import {educationData, techCategories} from "@/data/educationDataa"
 
 
 
