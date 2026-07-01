@@ -115,7 +115,7 @@ export function Header() {
         }`}
         onClick={() => setMenuOpen(false)}
         aria-hidden="true"
-        focus-trap-react
+        focus-trap-react="true"
       />
 
       <nav

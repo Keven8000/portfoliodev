@@ -29,7 +29,7 @@
 
 @theme {
    --font-mono: var(--font-geist-mono);
-   --font-geist-sans: var(--font-geist-sans);
+   --font-geist-sans: var(--font-geist-sans); 
   /* =========================================
      CORES BASE
      ========================================= */
