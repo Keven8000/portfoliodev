@@ -1,6 +1,4 @@
-// Mensagem pré-preenchida simulando como um recrutador/cliente
 
-import { GoNumber } from "react-icons/go";
 
 // naturalmente escreveria após ver o portfólio
 const whatsappMessage =

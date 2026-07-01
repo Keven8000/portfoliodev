@@ -25,7 +25,7 @@
 
   --surface: #bbb7b3; 
   --surface-text: #8d8888; 
-}
+} 
 
 @theme {
    --font-mono: var(--font-geist-mono);

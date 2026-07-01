@@ -4,12 +4,8 @@ import { ThemeButton } from "@/components/utilitarios/ThemeButton";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { navLinks } from "@/data/navLinks";
 
-const navLinks = [
-  { label: "Cases", href: "#cases" },
-  { label: "Educação & Tecnologias", href: "#educacao" },
-  { label: "Contato", href: "#contato" },
-];
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
