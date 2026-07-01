@@ -4,7 +4,8 @@ import { motion } from "motion/react";
 import { Mail, ArrowRight, Copy, CheckCircle2, Phone } from "lucide-react";
 import { SiGithub, SiWhatsapp } from "@icons-pack/react-simple-icons";
 import { useState } from "react";
-import { contactType, contactData } from "@/data/contactDataa";
+import { contactType, contactData } from "@/data/contactData";
+
 
 
 function LinkedinIcon({ className }: { className?: string }) {
