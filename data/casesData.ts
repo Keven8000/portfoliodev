@@ -17,11 +17,12 @@ export interface CaseProject {
   gallery: GalleryImage[];
 }
 
+
 export const casesData: CaseProject[] = [
     {
     id: "raro-pilates",
     name: "Raro Pilates",
-    url: "https://site-raropilates.vercel.app/",
+    url: "https://www.cursoescoladeeventos.com.br/",
     coverImage: "/cases/raropilates/capararopilates.webp",
     logo: "/cases/raropilates/raropilates-logo.webp",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
